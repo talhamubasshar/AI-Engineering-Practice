@@ -23,7 +23,7 @@ def process_user_records(raw_users: list[dict[str, Any]]) -> list[dict[str, Any]
             # Check required keys
             if "email" not in user or "name" not in user:
                 raise UserValidationError(f"Record {user.get('id', 'unknown')} missing email or name")
-
+                
             # Extract and sanitize
             user_id: int = user["id"]
             name: str = user["name"].strip().title()
@@ -60,6 +60,7 @@ def main() -> None:
         {"id": 2, "name": "Ayesha Khan", "email": "ayesha@company.pk", "is_active": False, "total_spend": 25.00},
         {"id": 3, "name": "corrupt record", "is_active": True},  # Missing email
         {"id": 4, "name": "hamza ali", "email": "hamza@domain.com", "is_active": True, "total_spend": 89.00},
+        {"id": 5, "name": "hammad", "email": "hammad@domain.com", "is_active": True, "total_spend": 210.00}
     ]
 
     print("--- Processing Raw Users ---")
@@ -82,3 +83,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
