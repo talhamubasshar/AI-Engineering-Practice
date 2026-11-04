@@ -29,3 +29,4 @@ A build-first, practical 12-week journey transitioning from Full-Stack TypeScrip
 - **Package Management**: `uv`
 - **Frameworks**: FastAPI, Pydantic v2, Next.js 15
 - **AI Tooling**: Groq SDK (Llama 3.3), Google GenAI SDK (Gemini Flash), Ollama, pgvector, LangGraph, Model Context Protocol (MCP)
+
